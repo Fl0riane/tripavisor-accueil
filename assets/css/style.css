@@ -1,0 +1,142 @@
+body {
+  font-family: "TS-Reg", sans-serif;
+}
+
+.container {
+  width: 1136px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: large;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/*-HEADER------*/
+header {
+  height: 60px;
+  justify-content: space-around;
+}
+header div {
+  display: flex;
+  height: 100%;
+
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
+}
+.img1 {
+  height: 40px;
+  padding-top: 10px;
+}
+header nav {
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+header nav p {
+  font-size: 18px;
+  border-radius: 120px;
+  padding-right: 5px;
+}
+header nav:hover {
+  background-color: rgb(224, 224, 224);
+}
+.research {
+  border: 2px solid rgb(224, 224, 224);
+  height: 40px;
+  width: 350px;
+  border-radius: 20px;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.icons {
+  height: 40px;
+
+  font-size: 30px;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.icons i {
+  width: 30px;
+  padding: 5px;
+}
+.login {
+  width: 150px;
+  background-color: black;
+  color: white;
+  font-size: bold;
+  border-radius: 20px;
+  height: 30px;
+  justify-content: center;
+}
+/*-main--------*/
+main {
+  padding-top: 30px;
+}
+
+h1 a {
+  color: red;
+}
+.baseline {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+/*-Navigation------*/
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.navigation nav {
+  border: 1px solid black;
+  height: 70px;
+  width: 180px;
+  border-radius: 15px;
+}
+.navigation p {
+  padding-top: 20px;
+  padding-left: 10px;
+  width: 90px;
+}
+
+/*-MAIN-IMG-----*/
+.main-img p {
+  margin-top: 30px;
+  font-size: 14px;
+}
+.main-img {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.big-img img {
+  width: 650px;
+  height: 430px;
+  object-fit: cover;
+}
+
+.little-img img {
+  margin-left: 5px;
+  width: 480px;
+  height: 213px;
+  object-fit: cover;
+}
