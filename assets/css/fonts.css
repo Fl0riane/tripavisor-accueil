@@ -13,10 +13,27 @@
 }
 
 @font-face {
-  font-family: "Trip Sans";
-  src: url("../css/fonts/TripSans-Medium.woff2") format("woff2"),
-    url("../css/fonts/TripSans-Medium.woff") format("woff");
+  font-family: "TS-Med";
+  src: url("../css/fonts/TripSans-Medium.eot");
+  src: url("../css/fonts/TripSans-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../css/fonts/TripSans-Medium.woff2") format("woff2"),
+    url("../css/fonts/TripSans-Medium.woff") format("woff"),
+    url("../css/fonts/TripSans-Medium.ttf") format("truetype"),
+    url("../css/fonts/TripSans-Medium.svg#TripSans-Medium") format("svg");
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TS-Ultra";
+  src: url("../css/fonts/TripSans-Ultra.eot");
+  src: url("../css/fonts/TripSans-Ultra.eot?#iefix") format("embedded-opentype"),
+    url("../css/fonts/TripSans-Ultra.woff2") format("woff2"),
+    url("../css/fonts/TripSans-Ultra.woff") format("woff"),
+    url("../css/fonts/TripSans-Ultra.ttf") format("truetype"),
+    url("../css/fonts/TripSans-Ultra.svg#TripSans-Ultra") format("svg");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
