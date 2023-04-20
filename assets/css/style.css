@@ -71,15 +71,18 @@ p {
 /*-HEADER------*/
 header {
   height: 60px;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1;
 }
-
 header div {
+  display: flex;
+}
+header > div {
   display: flex;
   height: 100%;
   align-items: center;
+  justify-content: space-between;
 }
 header img {
   height: 40px;
@@ -87,21 +90,23 @@ header img {
 }
 header nav {
   height: 100%;
+  max-width: 550px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+
   gap: 15px;
 }
 header nav :is(a, button) {
   padding: 7px 10px;
   border-radius: 20px;
-  /* border: 1px solid black; */
 }
 
 header nav a {
-  font-family: "TS-Reg", sans-serif;
+  display: contents;
   align-items: center;
-  display: flex;
+  font-family: "TS-Reg", sans-serif;
+
   gap: 5px;
 }
 header nav a:hover {
@@ -110,7 +115,7 @@ header nav a:hover {
 .research {
   border: 2px solid rgb(224, 224, 224);
   height: 35px;
-  width: 350px;
+  flex: 1;
   border-radius: 20px;
   align-items: center;
   display: flex;
@@ -181,26 +186,37 @@ main {
   object-fit: cover;
 }
 /*-Text-----------*/
-
-.Text {
+.text {
   padding: 80px 0px 0px 0px;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   gap: 20px;
+  justify-content: space-between;
+}
+.text > div {
+  width: 565px;
+}
+.text h4,
+h2 {
+  padding-right: 40px;
+}
+.text > nav {
+  width: 480px;
 }
 
-/*--Map----*/
-
-.Map nav {
+.text nav div {
   background-color: #fe5e5e;
   padding: 25px;
   border-radius: 10px 10px 0px 0px;
 }
-.Map button {
+.text nav button {
+  width: 120px;
+  height: 44px;
   border-radius: 15px;
+  font-size: 12px;
 }
 
-.Map img {
+.text nav img {
   width: 480px;
   height: 200px;
   object-fit: cover;
@@ -213,13 +229,14 @@ main {
   gap: 10px;
 }
 .activity > div a {
-  text-decoration: 1px solid black;
+  text-decoration: underline;
+  font-weight: bold;
 }
 .activity > div {
   width: 290px;
 }
 .activity nav {
-  width: 840px;
+  max-width: 840px;
   display: flex;
   overflow: hidden;
   overflow-x: scroll;
@@ -240,23 +257,32 @@ main {
   object-fit: cover;
   width: 270px;
 }
-.activity nav div {
+.activity nav > div {
   position: relative;
 }
-.logo {
-  height: 40px;
-  width: 40px;
+.hibou {
+  height: 45px;
+  width: 35px;
   position: absolute;
+  left: 10px;
   top: 150px;
-  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2b203;
+  border-radius: 20px 20px 5px 5px;
 }
-.activity div i {
+.logo {
   position: absolute;
   top: 10px;
   right: 10px;
   background-color: #fff;
-  padding: 5px 7px 5px 7px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer {
   background-color: #faf1ed;
@@ -276,4 +302,36 @@ footer img {
 footer a {
   font-family: "TS-Reg";
   font-weight: bold;
+}
+@media (max-width: 1024px) {
+  header nav {
+    max-width: 390px;
+    justify-content: end;
+  }
+  header nav p {
+    display: none;
+  }
+  .research {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  header div {
+    position: relative;
+  }
+  header nav p {
+    display: none;
+  }
+  header nav a :not(:last-child) {
+    display: none;
+  }
+  .research {
+    border: none;
+    justify-content: end;
+  }
+  header img {
+    position: absolute;
+    right: calc((100%-195px) / 2);
+  }
 }
