@@ -3,11 +3,11 @@
 }
 
 body {
-  font-family: "TS-Reg", "TS-Med", "TS-Ultra", sans-serif;
+  font-family: "IconTripAdvisor", "TS-Reg", "TS-Med", "TS-Ultra", sans-serif;
 }
 
 .container {
-  width: 1136px;
+  max-width: 1136px;
   margin: 0 auto;
   background-color: #fff;
 }
@@ -19,6 +19,13 @@ button {
   width: 150px;
   color: white;
   background-color: black;
+}
+
+.invisibleXL {
+  display: none;
+}
+.visibleXS {
+  display: none;
 }
 
 a {
@@ -84,8 +91,10 @@ header > div {
   align-items: center;
   justify-content: space-between;
 }
+
 header img {
   height: 40px;
+  width: 195px;
   margin-right: 30px;
 }
 header nav {
@@ -103,7 +112,7 @@ header nav :is(a, button) {
 }
 
 header nav a {
-  display: contents;
+  display: flex;
   align-items: center;
   font-family: "TS-Reg", sans-serif;
 
@@ -136,7 +145,12 @@ h1 a {
   font-size: 12px;
   margin-bottom: 30px;
 }
-
+.navigation menu {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  border: 1px solid red;
+}
 /*-Navigation------*/
 .navigation {
   display: flex;
@@ -145,8 +159,9 @@ h1 a {
   height: 70px;
 }
 .navigation div {
+  flex: 1;
   border: 1px solid black;
-  width: calc((100%-50px) / 5);
+  width: 180px;
   border-radius: 15px;
   padding: 15px;
   display: flex;
@@ -172,13 +187,22 @@ main {
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
+  max-width: 1136px;
+  position: relative;
 }
 .big-img img {
   width: 650px;
   height: 430px;
   object-fit: cover;
 }
-
+.logo2 {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 85px;
+  height: 85px;
+  background-color: #f2b203;
+}
 .little-img img {
   margin-left: 5px;
   width: 480px;
@@ -227,13 +251,14 @@ h2 {
 .activity {
   display: flex;
   gap: 10px;
+  justify-content: space-between;
 }
 .activity > div a {
   text-decoration: underline;
   font-weight: bold;
 }
 .activity > div {
-  width: 290px;
+  width: 250px;
 }
 .activity nav {
   max-width: 840px;
@@ -265,7 +290,7 @@ h2 {
   width: 35px;
   position: absolute;
   left: 10px;
-  top: 150px;
+  top: 145px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,6 +328,60 @@ footer a {
   font-family: "TS-Reg";
   font-weight: bold;
 }
+
+@media (max-width: 1184px) {
+  .invisibleXL {
+    display: inline;
+  }
+  .navigation section {
+    display: flex;
+    gap: 10px;
+  }
+  .navigation menu {
+    flex: 1;
+  }
+
+  .navigation {
+    flex-direction: column;
+
+    height: 105px;
+  }
+
+  .navigation div {
+    width: 272px;
+  }
+  .main-img {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+  .main-img div:first-child {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+  .big-img img {
+    max-height: 360px;
+    width: 725px;
+    object-fit: cover;
+  }
+
+  .little-img img {
+    margin-left: 5px;
+    width: 400px;
+    height: 180px;
+    object-fit: cover;
+    flex: 1;
+  }
+
+  .little-img .main-img {
+    flex: 1;
+  }
+}
+
 @media (max-width: 1024px) {
   header nav {
     max-width: 390px;
@@ -317,21 +396,31 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  header div {
+  .container header {
     position: relative;
   }
-  header nav p {
-    display: none;
+
+  header .visibleXS {
+    display: inline;
+    width: 100%;
+    padding-left: 20px;
   }
-  header nav a :not(:last-child) {
-    display: none;
+  header img {
+    position: absolute;
+    right: calc((100% - 195px) / 2);
   }
   .research {
     border: none;
     justify-content: end;
   }
-  header img {
-    position: absolute;
-    right: calc((100%-195px) / 2);
+  header nav p {
+    display: none;
+  }
+  header nav a:not(:last-child) {
+    display: none;
+  }
+
+  header nav button {
+    display: none;
   }
 }

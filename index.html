@@ -7,40 +7,42 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/fonts.css" />
-    <script
+    <link rel="stylesheet" href="./assets/css/icons.css" />
+    <!-- <script
       src="https://kit.fontawesome.com/3815160ba9.js"
-      crossorigin="anonymous"
+      crossorigin="anonymous" -->
     ></script>
     <title>Repro tripadvisor</title>
   </head>
   <body>
     <header>
       <div class="container">
+        <i class="fa-solid fa-bars visibleXS"></i>
         <img
           src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
           alt=""
         />
         <div class="research">
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="icon-search"></i>
         </div>
         <nav>
           <a href="#"
-            ><i class="fa-solid fa-pen"></i>
+            ><i class="icon-pencil"></i>
             <p>Avis</p></a
           >
 
           <a href="#"
-            ><i class="fa-solid fa-heart" style="color: #16141a"></i>
+            ><i class="icon-heart"></i>
             <p>Voyages</p></a
           >
           <a href="#"
-            ><i class="fa-solid fa-cart-shopping"></i>
+            ><i class="icon-notification_bell"></i>
             <p>Alertes</p></a
           >
 
           <button>Connectez-vous</button>
           <a href="#"
-            ><i class="fa-solid fa-cart-shopping"></i>
+            ><i class="icon-empty_cart"></i>
             <p>Panier</p></a
           >
         </nav>
@@ -54,34 +56,47 @@
         page : en savoir plus.
       </p>
       <nav class="navigation">
-        <div>
-          <p>Hotels</p>
-          <i class="fa-solid fa-bed"></i>
-        </div>
-        <div>
-          <p>Locations de vacances</p>
-          <i class="fa-solid fa-house"></i>
-        </div>
-        <div>
-          <p>Activités</p>
-          <i class="fa-solid fa-road"></i>
-        </div>
-        <div>
-          <p>Restaurants</p>
-          <i class="fa-solid fa-utensils"></i>
-        </div>
-        <div>
+        <menu
+          ><div>
+            <p>Hotels</p>
+            <i class="icon-hotels"></i>
+          </div>
+          <div>
+            <p>Locations de vacances</p>
+            <i class="icon-attractions"></i>
+          </div>
+          <div>
+            <p>Activités</p>
+            <i class="icon-restaurants"></i>
+          </div>
+          <div>
+            <p>Restaurants</p>
+            <i class="icon-restaurants"></i></div
+        ></menu>
+        <menu> <div>
           <p>Forums de voyage</p>
-          <i class="fa-solid fa-comments"></i>
+          <i class="icon-forums"></i>
         </div>
+        <section class="invisibleXL"><div >
+            <p>Vols</p>
+            <i class="icon-flights"></i>
+          </div>
+          <div >
+            <p>Croisières</p>
+            <i class="icon-cruises"></i>
+          </div></section>
+    
         <div>
           <p>Plus</p>
-          <i class="fa-solid fa-ellipsis"></i>
+          <i class="icon-more_horizontal"></i>
         </div>
-      </nav>
+      </nav></menu>
+
+       
       <p>Sponsorisé par Espagne</p>
 
-      <section class="main-img">
+      <section class="main-img"><div class="logo2"><img src="./assets/img/TC_LL.svg" alt="logo hibou" /></div>
+        
         <div class="big-img">
           <img
             src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5f/12/72/caption.jpg?w=700&h=-1&s=1"
@@ -139,7 +154,7 @@
           <h3>Se divertir</h3>
           <h5>
             Des lieux à voir, des rues à explorer et des expériences
-            emblématiques à Barcelone
+            emblématiques à Barcelone.
           </h5>
           <a href="#"><p>Tout afficher</p></a>
         </div>
